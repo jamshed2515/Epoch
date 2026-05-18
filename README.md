@@ -1,59 +1,162 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Epoch
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Find the right professional. Pick a real slot. Confirm the appointment.**
 
-## About Laravel
+Epoch is a Laravel-powered appointment booking platform for connecting people with trusted professionals across doctors, tutors, consultants, lawyers, therapists, and fitness coaches. It brings discovery, scheduling, payments, dashboards, admin controls, and API access into one clean product experience.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The app is built for a marketplace-style workflow: clients browse professionals, professionals manage availability and appointment states, and admins keep the platform organized.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## What Epoch Does
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Discover professionals by category, search, rating, location, and profile details.
+- Book appointments against real availability windows and avoid already-booked slots.
+- Let clients track upcoming and past appointments from a user dashboard.
+- Let professionals confirm, reject, complete, and manage appointments from their own dashboard.
+- Let professionals create and update public profiles, consultation fees, experience, specialization, and working hours.
+- Let admins manage users, professionals, categories, and platform-wide appointments.
+- Support Razorpay live payments when keys are configured, with a built-in demo payment mode for local development.
+- Send appointment confirmation and cancellation emails through queued mailables.
+- Offer public and authenticated API endpoints backed by Laravel Sanctum.
+- Support English and Hindi interface strings.
 
-## Learning Laravel
+## Product Story
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Epoch is about turning appointment booking from a back-and-forth conversation into a crisp, visible timeline.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+A user can land on the homepage, search for a professional, inspect experience and consultation fees, choose a date and slot, pay, and receive an appointment record. A professional can review the booking, move it through the appointment lifecycle, and keep availability current. An admin gets the control room: categories, professionals, users, and appointments in one place.
 
-## Laravel Sponsors
+## Core Roles
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Role | Capabilities |
+| --- | --- |
+| Client | Register/login, browse professionals, book and pay for appointments, view appointment history, cancel eligible future appointments |
+| Professional | Maintain a professional profile, set availability, confirm/reject/complete appointments, view dashboard metrics |
+| Admin | Manage users, professionals, categories, and appointments |
 
-### Premium Partners
+## Main Modules
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **Marketplace discovery:** public category browsing and professional profile pages.
+- **Scheduling engine:** availability records generate date-specific time slots, excluding pending and confirmed bookings.
+- **Appointment lifecycle:** pending, confirmed, cancelled, and completed states.
+- **Payments:** Razorpay integration with signature verification, plus local demo checkout when live keys are absent.
+- **Dashboards:** separate views for users, professionals, and admins.
+- **Localization:** English and Hindi language files.
+- **API:** public professional listing/detail endpoints, authenticated appointment resources, and a health check.
 
-## Contributing
+## Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Backend:** Laravel 12, PHP 8.2+
+- **Frontend:** Blade, Tailwind CSS, Alpine.js, Lucide icons, Vite
+- **Database:** SQLite by default for local development, MySQL-ready configuration for production
+- **Auth/API:** Laravel authentication plus Sanctum
+- **Payments:** Razorpay
+- **Mail:** Laravel mailables and queues
+- **Testing:** PHPUnit
 
-## Code of Conduct
+## Quick Start
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Clone the project and install dependencies:
 
-## Security Vulnerabilities
+```bash
+composer install
+npm install
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Create your environment file:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+For SQLite development, create the database file and set `DB_DATABASE` in `.env` to its absolute path:
+
+```bash
+touch database/database.sqlite
+```
+
+Run migrations and seed the demo marketplace:
+
+```bash
+php artisan migrate --seed
+```
+
+Build frontend assets:
+
+```bash
+npm run build
+```
+
+Start the development workflow:
+
+```bash
+composer run dev
+```
+
+That launches the Laravel server, queue listener, logs, and Vite together through `concurrently`.
+
+## Demo Data
+
+The seeders create a working local marketplace with:
+
+- Professional categories such as Doctors, Tutors, Consultants, Lawyers, Therapists, and Fitness Coaches.
+- Demo professionals across Indian cities with fees, ratings, specializations, and availability.
+- Demo users and sample appointment records.
+
+Seeded accounts use `password` as the default password. The admin account is:
+
+```text
+admin@appointease.com
+```
+
+## Payments
+
+Epoch supports two payment paths:
+
+- **Demo mode:** used automatically when Razorpay keys are missing or placeholder values. This lets you simulate a successful booking locally.
+- **Live mode:** enabled when valid `RAZORPAY_KEY` and `RAZORPAY_SECRET` values are configured.
+
+Add the Razorpay keys to `.env` when you are ready to test real checkout flows.
+
+## API Surface
+
+Public endpoints:
+
+```text
+GET /api/ping
+GET /api/professionals
+GET /api/professionals/{professional}
+```
+
+Authenticated with Sanctum:
+
+```text
+GET /api/user
+apiResource /api/appointments
+```
+
+## Useful Commands
+
+```bash
+php artisan migrate --seed
+php artisan test
+npm run build
+composer run dev
+```
+
+On Windows PowerShell, if script execution blocks `npm`, use:
+
+```bash
+npm.cmd install
+npm.cmd run build
+```
+
+## Project Notes
+
+- `.env`, `vendor`, `node_modules`, local SQLite data, logs, and built assets are intentionally ignored.
+- The current app name inside `.env.example` and several Blade strings may still mention AppointEase from the original product naming. The repository identity is Epoch.
+- The default feature test may need database refresh setup before it can hit `/` successfully with an in-memory SQLite database.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Epoch is built on Laravel and follows the license terms included with this project.
