@@ -176,9 +176,9 @@ RAZORPAY_KEY_SECRET=xxxx</pre>
         key: "{{ $razorpayKey }}",
         amount: {{ $amountPaise }},
         currency: "INR",
-        name: "AppointEase",
+        name: "Epoch",
         description: "Appointment with {{ $professional->user->name }}",
-        image: "https://ui-avatars.com/api/?name=AppointEase&background=6366f1&color=fff&size=128",
+        image: "https://ui-avatars.com/api/?name=Epoch&background=6366f1&color=fff&size=128",
         order_id: "{{ $order->id }}",
         handler: function(response) {
             document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;

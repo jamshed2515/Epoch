@@ -9,7 +9,7 @@
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
                     <i data-lucide="calendar-check" class="w-5 h-5 text-white"></i>
                 </div>
-                <span class="text-2xl font-bold gradient-text">AppointEase</span>
+                <span class="text-2xl font-bold gradient-text">Epoch</span>
             </a>
             <h1 class="text-2xl font-bold text-gray-900 mt-6 mb-1">Create your account</h1>
             <p class="text-gray-500 text-sm">Join thousands of users booking appointments daily</p>

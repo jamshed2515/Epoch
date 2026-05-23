@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'AppointEase — Book Appointments Online')
-@section('meta_description', 'Book appointments with top doctors, tutors, lawyers, and consultants. AppointEase makes professional appointment booking fast and easy.')
+@section('title', 'Epoch — Book Appointments Online')
+@section('meta_description', 'Book appointments with top doctors, tutors, lawyers, and consultants. Epoch makes professional appointment booking fast and easy.')
 
 @section('content')
 
@@ -183,7 +183,7 @@
     <div class="absolute inset-0 bg-grid-white/10 bg-[size:30px_30px]"></div>
     <div class="relative text-center max-w-2xl mx-auto px-6">
         <h2 class="text-3xl font-extrabold text-white mb-4">Ready to get started?</h2>
-        <p class="text-indigo-200 mb-8">Join thousands of users who book appointments daily on AppointEase.</p>
+        <p class="text-indigo-200 mb-8">Join thousands of users who book appointments daily on Epoch.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="{{ route('register') }}" class="px-8 py-4 bg-white text-indigo-700 font-bold rounded-xl hover:bg-indigo-50 shadow-lg hover:shadow-xl transition-all">
                 Create Free Account

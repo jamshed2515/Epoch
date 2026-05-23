@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="description" content="@yield('meta_description', 'AppointEase — Book appointments with top professionals. Doctors, Tutors, Lawyers, Consultants — all in one place.')">
-    <title>@yield('title', 'AppointEase') — Online Appointment Booking</title>
+    <meta name="description" content="@yield('meta_description', 'Epoch — Book appointments with top professionals. Doctors, Tutors, Lawyers, Consultants — all in one place.')">
+    <title>@yield('title', 'Epoch') — Online Appointment Booking</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

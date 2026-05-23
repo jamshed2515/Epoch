@@ -20,7 +20,7 @@ return [
 
     // Messages
     'welcome_back'         => 'वापसी पर स्वागत है, :name!',
-    'register_success'     => 'खाता सफलतापूर्वक बनाया गया! AppointEase में आपका स्वागत है।',
+    'register_success'     => 'खाता सफलतापूर्वक बनाया गया! Epoch में आपका स्वागत है।',
     'logout_success'       => 'आप सफलतापूर्वक लॉगआउट हो गए हैं।',
     'appointment_booked'   => 'अपॉइंटमेंट सफलतापूर्वक बुक हो गई! हम जल्द ही पुष्टि करेंगे।',
     'appointment_cancelled'=> 'अपॉइंटमेंट रद्द कर दी गई है।',

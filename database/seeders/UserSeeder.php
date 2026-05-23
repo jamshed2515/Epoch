@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // 1. Admin
-        $admin = User::firstOrCreate(['email' => 'admin@appointease.com'], [
+        $admin = User::firstOrCreate(['email' => 'admin@epoch.com'], [
             'name'     => 'Admin User',
             'password' => Hash::make('password'),
             'role'     => 'admin',
@@ -25,23 +25,23 @@ class UserSeeder extends Seeder
 
         // 2. Professionals
         $professionalsData = [
-            ['name' => 'Dr. Priya Sharma', 'email' => 'priya@appointease.com', 'category' => 'doctors',
+            ['name' => 'Dr. Priya Sharma', 'email' => 'priya@epoch.com', 'category' => 'doctors',
              'bio' => 'Experienced cardiologist with over 15 years in clinical practice. Specializes in heart disease prevention and management.',
              'experience_years' => 15, 'location' => 'Mumbai, Maharashtra', 'consultation_fee' => 800, 'specializations' => ['Cardiology', 'Hypertension', 'Preventive Care']],
 
-            ['name' => 'Prof. Rahul Mehta', 'email' => 'rahul@appointease.com', 'category' => 'tutors',
+            ['name' => 'Prof. Rahul Mehta', 'email' => 'rahul@epoch.com', 'category' => 'tutors',
              'bio' => 'IIT alumnus offering expert tutoring in Mathematics, Physics, and JEE/NEET preparation.',
              'experience_years' => 8, 'location' => 'Delhi', 'consultation_fee' => 500, 'specializations' => ['Mathematics', 'Physics', 'JEE Prep']],
 
-            ['name' => 'Adv. Sunita Kapoor', 'email' => 'sunita@appointease.com', 'category' => 'lawyers',
+            ['name' => 'Adv. Sunita Kapoor', 'email' => 'sunita@epoch.com', 'category' => 'lawyers',
              'bio' => 'Senior advocate with expertise in civil law, family law, and corporate matters.',
              'experience_years' => 12, 'location' => 'Bangalore', 'consultation_fee' => 1000, 'specializations' => ['Civil Law', 'Family Law', 'Corporate']],
 
-            ['name' => 'Mr. Arun Verma', 'email' => 'arun@appointease.com', 'category' => 'consultants',
+            ['name' => 'Mr. Arun Verma', 'email' => 'arun@epoch.com', 'category' => 'consultants',
              'bio' => 'Business strategy consultant helping SMEs scale their operations and improve profitability.',
              'experience_years' => 10, 'location' => 'Hyderabad', 'consultation_fee' => 1500, 'specializations' => ['Strategy', 'Finance', 'Operations']],
 
-            ['name' => 'Dr. Meera Nair', 'email' => 'meera@appointease.com', 'category' => 'therapists',
+            ['name' => 'Dr. Meera Nair', 'email' => 'meera@epoch.com', 'category' => 'therapists',
              'bio' => 'Clinical psychologist specializing in anxiety, depression, and cognitive behavioral therapy.',
              'experience_years' => 7, 'location' => 'Chennai', 'consultation_fee' => 600, 'specializations' => ['CBT', 'Anxiety', 'Depression']],
         ];

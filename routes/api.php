@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| API Routes — AppointEase
+| API Routes — Epoch
 |--------------------------------------------------------------------------
 */
 
@@ -31,4 +31,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 // Health check
-Route::get('/ping', fn() => response()->json(['status' => 'ok', 'service' => 'AppointEase API', 'version' => '1.0']));
+Route::get('/ping', fn() => response()->json(['status' => 'ok', 'service' => 'Epoch API', 'version' => '1.0']));

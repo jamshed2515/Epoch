@@ -106,7 +106,7 @@ The seeders create a working local marketplace with:
 Seeded accounts use `password` as the default password. The admin account is:
 
 ```text
-admin@appointease.com
+admin@epoch.com
 ```
 
 ## Payments
@@ -154,7 +154,7 @@ npm.cmd run build
 ## Project Notes
 
 - `.env`, `vendor`, `node_modules`, local SQLite data, logs, and built assets are intentionally ignored.
-- The current app name inside `.env.example` and several Blade strings may still mention AppointEase from the original product naming. The repository identity is Epoch.
+- The repository identity is Epoch.
 - The default feature test may need database refresh setup before it can hit `/` successfully with an in-memory SQLite database.
 
 ## License

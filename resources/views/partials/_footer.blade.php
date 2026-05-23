@@ -7,7 +7,7 @@
                     <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
                         <i data-lucide="calendar-check" class="w-4 h-4 text-white"></i>
                     </div>
-                    <span class="text-xl font-bold text-white">AppointEase</span>
+                    <span class="text-xl font-bold text-white">Epoch</span>
                 </div>
                 <p class="text-sm text-gray-400 leading-relaxed max-w-sm">
                     Book appointments with top professionals — doctors, tutors, lawyers, consultants, and more. Fast, easy, and reliable.
@@ -40,7 +40,7 @@
         </div>
 
         <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p class="text-xs text-gray-500">© {{ date('Y') }} AppointEase. All rights reserved.</p>
+            <p class="text-xs text-gray-500">© {{ date('Y') }} Epoch. All rights reserved.</p>
             <div class="flex items-center gap-4">
                 <a href="{{ route('locale.switch', 'en') }}" class="text-xs {{ app()->getLocale() === 'en' ? 'text-indigo-400' : 'text-gray-500 hover:text-gray-300' }} transition-colors">English</a>
                 <a href="{{ route('locale.switch', 'hi') }}" class="text-xs {{ app()->getLocale() === 'hi' ? 'text-indigo-400' : 'text-gray-500 hover:text-gray-300' }} transition-colors">हिंदी</a>

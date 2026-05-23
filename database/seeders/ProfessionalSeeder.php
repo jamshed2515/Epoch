@@ -26,7 +26,7 @@ class ProfessionalSeeder extends Seeder
         ];
 
         foreach ($names as $i => $name) {
-            $email = strtolower(str_replace([' ', '.'], ['_', ''], $name)) . $i . '@appointease.com';
+            $email = strtolower(str_replace([' ', '.'], ['_', ''], $name)) . $i . '@epoch.com';
             $category = $categories->random();
 
             $user = User::firstOrCreate(['email' => $email], [

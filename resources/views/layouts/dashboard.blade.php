@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Dashboard') — AppointEase</title>
+    <title>@yield('title', 'Dashboard') — Epoch</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -78,7 +78,7 @@
                     <i data-lucide="calendar-check" class="w-4 h-4 text-white"></i>
                 </div>
                 <span class="font-bold text-lg gradient-text whitespace-nowrap transition-all duration-200"
-                      x-show="sidebarOpen" x-cloak>AppointEase</span>
+                      x-show="sidebarOpen" x-cloak>Epoch</span>
             </a>
 
             {{-- Close arrow (expanded only) --}}
@@ -199,7 +199,7 @@ function dashboardApp() {
             this.sidebarOpen = !this.isMobile;
 
             // Restore user preference from localStorage
-            const saved = localStorage.getItem('ae_sidebar');
+            const saved = localStorage.getItem('epoch_sidebar');
             if (saved !== null && !this.isMobile) {
                 this.sidebarOpen = saved === 'true';
             }
@@ -217,7 +217,7 @@ function dashboardApp() {
         toggleSidebar() {
             this.sidebarOpen = !this.sidebarOpen;
             if (!this.isMobile) {
-                localStorage.setItem('ae_sidebar', this.sidebarOpen);
+                localStorage.setItem('epoch_sidebar', this.sidebarOpen);
             }
             this.$nextTick(() => lucide.createIcons());
         },

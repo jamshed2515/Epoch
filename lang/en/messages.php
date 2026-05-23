@@ -20,7 +20,7 @@ return [
 
     // Messages
     'welcome_back'         => 'Welcome back, :name!',
-    'register_success'     => 'Account created successfully! Welcome to AppointEase.',
+    'register_success'     => 'Account created successfully! Welcome to Epoch.',
     'logout_success'       => 'You have been logged out.',
     'appointment_booked'   => 'Appointment booked successfully! We will confirm shortly.',
     'appointment_cancelled'=> 'Appointment has been cancelled.',

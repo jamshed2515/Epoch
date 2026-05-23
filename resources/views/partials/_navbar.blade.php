@@ -6,7 +6,7 @@
                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
                     <i data-lucide="calendar-check" class="w-4 h-4 text-white"></i>
                 </div>
-                <span class="text-xl font-bold gradient-text">AppointEase</span>
+                <span class="text-xl font-bold gradient-text">Epoch</span>
             </a>
 
             <!-- Desktop Nav -->
