@@ -88,21 +88,26 @@
                     <!-- Footer Socials inside Card -->
                     <div class="mt-8 pt-5 border-t border-slate-100 relative">
                         <p class="text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-3">Connect on Socials</p>
-                        <div class="flex gap-2.5">
-                            <a href="https://twitter.com" target="_blank" class="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-[#1DA1F2] hover:scale-110 hover:-translate-y-0.5 shadow-sm hover:shadow-cyan-500/10 transition-all duration-300 group/social">
-                                <i data-lucide="twitter" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors"></i>
+                        <div class="flex gap-3">
+                            <!-- GitHub -->
+                            <a href="javascript:void(0)" class="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 group/social">
+                                <i data-lucide="github" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors duration-300"></i>
                             </a>
-                            <a href="https://linkedin.com" target="_blank" class="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-[#0077B5] hover:scale-110 hover:-translate-y-0.5 shadow-sm hover:shadow-blue-500/10 transition-all duration-300 group/social">
-                                <i data-lucide="linkedin" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors"></i>
+                            <!-- LinkedIn -->
+                            <a href="javascript:void(0)" class="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 group/social">
+                                <i data-lucide="linkedin" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors duration-300"></i>
                             </a>
-                            <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:to-[#ee2a7b] hover:scale-110 hover:-translate-y-0.5 shadow-sm hover:shadow-pink-500/10 transition-all duration-300 group/social">
-                                <i data-lucide="instagram" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors"></i>
+                            <!-- Instagram -->
+                            <a href="javascript:void(0)" class="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 group/social">
+                                <i data-lucide="instagram" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors duration-300"></i>
                             </a>
-                            <a href="https://facebook.com" target="_blank" class="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-[#1877F2] hover:scale-110 hover:-translate-y-0.5 shadow-sm hover:shadow-blue-600/10 transition-all duration-300 group/social">
-                                <i data-lucide="facebook" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors"></i>
+                            <!-- Twitter/X -->
+                            <a href="javascript:void(0)" class="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 group/social">
+                                <i data-lucide="twitter" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors duration-300"></i>
                             </a>
-                            <a href="https://youtube.com" target="_blank" class="w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-[#FF0000] hover:scale-110 hover:-translate-y-0.5 shadow-sm hover:shadow-red-500/10 transition-all duration-300 group/social">
-                                <i data-lucide="youtube" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors"></i>
+                            <!-- Facebook -->
+                            <a href="javascript:void(0)" class="w-10 h-10 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/10 hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 group/social">
+                                <i data-lucide="facebook" class="w-4 h-4 text-slate-500 group-hover/social:text-white transition-colors duration-300"></i>
                             </a>
                         </div>
                     </div>
