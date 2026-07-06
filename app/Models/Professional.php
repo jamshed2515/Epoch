@@ -64,8 +64,43 @@ class Professional extends Model
         if ($this->photo) {
             return asset('storage/' . $this->photo);
         }
-        $name = urlencode($this->user->name ?? 'Pro');
-        return "https://ui-avatars.com/api/?name={$name}&background=6366f1&color=fff&size=256";
+
+        // High-resolution, professional square portraits from Unsplash
+        // Uses &crop=faces to auto-detect and center the face perfectly, preventing cutoff!
+        $maleAvatars = [
+            'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Executive man
+            'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Doctor male
+            'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Businessman
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Tutor male
+            'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Executive consultant
+            'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Professional advisor
+        ];
+
+        $femaleAvatars = [
+            'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Executive woman
+            'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Doctor female
+            'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Smiling teacher
+            'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Therapist female
+            'https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Corporate manager
+            'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&crop=faces&w=600&h=600&q=80', // Professional lady
+        ];
+
+        $name = strtolower($this->user->name ?? '');
+
+        // Detect gender based on common title prefixes or first names
+        $isFemale = false;
+        $femaleKeywords = ['priya', 'sunita', 'meera', 'pooja', 'neha', 'anjali', 'rekha', 'lakshmi', 'preeti', 'nidhi', 'ms.', 'mrs.'];
+        foreach ($femaleKeywords as $keyword) {
+            if (str_contains($name, $keyword)) {
+                $isFemale = true;
+                break;
+            }
+        }
+
+        // Stable selection index based on the professional's ID
+        $index = ($this->id ?? 0) % 6;
+
+        return $isFemale ? $femaleAvatars[$index] : $maleAvatars[$index];
     }
 
     /**
